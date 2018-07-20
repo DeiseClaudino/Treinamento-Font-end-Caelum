@@ -9,12 +9,16 @@ body {
   font-size: 18px;
 }
 
+@@media (min-width: 768px) {
+  font-size: 22px;
+}
+
 img {
   max-width: 100%;
 }
 
 header {
-box-shadow: 0 0 10px rgba(0,0,0,.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .5);
 }
 
 header img {
@@ -35,11 +39,9 @@ header button {
   z-index: 1;
 }
 
-header button:focus +  nav,
-header button:active + nav {
+header button:focus+nav, header button:active+nav {
   transform: translateY(0);
-  box-shadow: 0 0 10px rgba(0,0,0,.5);
-
+  box-shadow: 0 0 10px rgba(0, 0, 0, .5);
 }
 
 header nav {
@@ -57,4 +59,102 @@ header nav a {
   text-align: center;
   padding: 10px;
   text-decoration: none;
+}
+
+.banner {
+  background-color: #B0E2FF;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, .5);
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  text-size: 2.5em;
+  padding: 30px 0 120px;
+}
+
+.busca {
+  background: #eee;
+  padding: 10px;
+  margin: -80px 20px 50px;
+  border-radius: 10px;
+  box-shadow: 0, 10px 10px rgba(0, 0, 0, .5);
+}
+
+.busca input, .busca select, .busca button {
+  display: block;
+  border-radius: 6px;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  border: 1px solid #ddd;
+  background-color: white;
+}
+
+.busca select {
+  margin: 10px 0;
+}
+
+.busca button {
+  background-color: red;
+  color: white;
+  text-transform: uppercase;
+}
+
+section h2 {
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+empresas {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.empresas a {
+  display: block;
+  float: left;
+  background-color: pink;
+  height: 140px;
+  width: 360px;
+}
+
+.empresas img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  object-fit: contain;
+}
+
+.empresas button {
+  font-size: 2em;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #ddd;
+  color: #333;
+  box-shadow: 0 5px 5px rgba() position:absolute;
+  top: 50%;
+  text-align: center;
+  opacity: .5;
+  border: 0;
+}
+
+.empresas[title=voltar] {
+  left: 10px;
+}
+
+empresas .button:focus {
+  
+}
+
+.empresas[title=avancar] {
+  right: 10px;
+}
+
+.frame {
+  overflow: scroll;
+}
+
+.slider {
+  width: calc(360px * 6);
 }
